@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid none;
+}
+
 body {
   font-family: 'Zilla Slab', serif;
   font size: 1.2em;
@@ -5,11 +9,17 @@ body {
   font-size: 100%;
   color: black;
   background-color: white;
+  padding: 0px 20px;
+
 }
 
 img {
   max-width: 100%;
 }
+/*Text STYLES
+=======================================*/
+
+
 
 /*LINK STYLES
 =======================================*/
