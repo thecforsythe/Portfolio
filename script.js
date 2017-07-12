@@ -9,3 +9,13 @@ function Portfolio (image, name, link, date, notes) {
 }
 
 var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecforsythe.github.io/About-Me/', '6-12-17', 'Created first website using HTML and Javascript. Hey everbody has to start somewhere.');
+
+
+$(document).ready(function(){
+  $('.main-nav').click(function(){
+    $('li').slideToggle();
+  });
+});
+
+
+console.log(aboutMe)

@@ -8,12 +8,12 @@
   font-size: 1.2em;
 }
 .main-nav ul{
-  display: none;
+  display: block;
   padding-bottom: 5px;
 }
-.main-nav:hover ul{
+/*.main-nav:hover ul{
   display: block;
-}
+}*/
 
 @media only screen and (min-width: 500px){
   .main-nav ul{
@@ -23,5 +23,7 @@
     max-width: 150px;
     background-color: none;
   }
-
+  .social{
+    /*display: none;*/
+  }
 }
