@@ -1,0 +1,27 @@
+.fa-bars {
+  float: left;
+  margin-top: -40px;
+  display: inline;
+}
+
+.tabs {
+  font-size: 1.2em;
+}
+.main-nav ul{
+  display: none;
+  padding-bottom: 5px;
+}
+.main-nav:hover ul{
+  display: block;
+}
+
+@media only screen and (min-width: 500px){
+  .main-nav ul{
+    float: left;
+    display: block;
+    padding-right: 20px;
+    max-width: 150px;
+    background-color: none;
+  }
+
+}
