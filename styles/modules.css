@@ -8,13 +8,21 @@
   font-size: 1.2em;
 }
 .main-nav ul{
-  display: none;
+  display: block;
   padding-bottom: 5px;
 }
-.main-nav:hover ul{
+/*.main-nav:hover ul{
   display: block;
+}*/
+.socialMedia {
+  float: right;
+  margin-top: -50;
+  outline: 1px solid red;
 }
-
+.socialMediaIcon {
+  display:inline;
+  padding: 5px;
+}
 @media only screen and (min-width: 500px){
   .main-nav ul{
     float: left;
@@ -23,5 +31,7 @@
     max-width: 150px;
     background-color: none;
   }
-
+  .social{
+    /*display: none;*/
+  }
 }
