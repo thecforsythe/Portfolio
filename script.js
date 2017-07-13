@@ -21,6 +21,11 @@ $(document).ready(function(){
 */
 
 /* Click tab to reveal div */
+$(document).ready(function(){
+  $('.tab-content').hide();
+  $('#home').show();
+});
+
 
 $(document).ready(function(){
   $('.tabs').on('click',function(){
