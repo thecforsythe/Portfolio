@@ -12,20 +12,21 @@ var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecfor
 
 /* Click Hamburger to reveal tabs */
 
-/*
+
 $(document).ready(function(){
+  $('li').hide();
   $('.main-nav').click(function(){
     $('li').slideToggle();
   });
 });
-*/
 
-/* Click tab to reveal div */
+/* Show only home div on load */
 $(document).ready(function(){
   $('.tab-content').hide();
   $('#home').show();
 });
 
+/* Click tab to reveal div */
 
 $(document).ready(function(){
   $('.tabs').on('click',function(){
