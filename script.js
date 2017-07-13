@@ -11,12 +11,10 @@ function Portfolio (image, name, link, date, notes) {
 var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecforsythe.github.io/About-Me/', '6-12-17', 'Created first website using HTML and Javascript. Hey everbody has to start somewhere.');
 
 /* Click Hamburger to reveal tabs */
-
-
 $(document).ready(function(){
   $('li').hide();
   $('.main-nav').click(function(){
-    $('li').slideToggle();
+    $('li').slideToggle(100);
   });
 });
 
@@ -27,13 +25,12 @@ $(document).ready(function(){
 });
 
 /* Click tab to reveal div */
-
 $(document).ready(function(){
   $('.tabs').on('click',function(){
-    var selectedTab = $(this).data('content');
     $('.tab-content').hide();
+    var selectedTab = $(this).data('content');
     var makeIDforTab = '#' + selectedTab;
-    $(makeIDforTab).show();
+    $(makeIDforTab).show(500);
   });
 });
 /*
