@@ -14,9 +14,9 @@
 /*.main-nav:hover ul{
   display: block;
 }*/
-.socialMedia {
+.socialMedia ul{
   float: right;
-  margin-top: -50;
+  margin-top: -31px;
   outline: 1px solid red;
 }
 .socialMediaIcon {
