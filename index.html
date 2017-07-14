@@ -45,10 +45,17 @@
     </div>
     <div id="web-design" class="tab-content">
       <h2>Web Design</h2>
-      <img src="pictures/aboutMeScreenShot.png"/>
-      <p>
-        You are on the Web Design page
-      </p>
+
+      <script id="web-design-template" type="text/x-handlebars-template">
+        <section>
+          <a href="{{url}}"><img src="{{screenShotFileName}}"/></a>
+            <div class="projectInfo">
+              <span class="projectInfoCategory">title: </span>{{title}}
+              <span class="projectInfoCategory">date: </span>{{date}}
+              <span class="projectInfoCategory">description: </span>{{{description}}}
+            </div>
+        </section>
+      </script>
     </div>
     <div id="art" class="tab-content">
       <h2>Artwork</h2>
