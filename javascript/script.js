@@ -1,5 +1,5 @@
 'use strict';
-
+/*-------------CONSTRUCTOR FUNCTION----------
 function Portfolio (image, name, link, date, notes) {
   this.image = image;
   this.name = name;
@@ -9,38 +9,36 @@ function Portfolio (image, name, link, date, notes) {
 }
 
 var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecforsythe.github.io/About-Me/', '6-12-17', 'Created first website using HTML and Javascript. Hey everbody has to start somewhere.');
+console.log(aboutMe);
 
+--------------------END-------------------*/
 /* Click Hamburger to reveal tabs */
-$(document).ready(function(){
+var hamburgerReveal = function() {
   $('.tabs').hide();
   $('.main-nav').click(function(){
     $('.tabs').slideToggle(100);
   });
-});
+};
 
 /* Show only home div on load */
-$(document).ready(function(){
+var homeOnlyOnLoad = function() {
   $('.tab-content').hide();
   $('#home').show();
-});
+};
 
 /* Click tab to reveal div */
-$(document).ready(function(){
+var selectedTabReveal = function() {
   $('.tabs').on('click',function(){
     $('.tab-content').hide();
     var selectedTab = $(this).data('content');
     var makeIDforTab = '#' + selectedTab;
     $(makeIDforTab).show(500);
   });
-});
-/*
-hamburgerReveal = function() {
-  $('.main-nav').click(function(){
-    $('li').slideToggle();
-  });
 };
 
+/* Call all functions */
 $(document).ready(function(){
   hamburgerReveal();
-})*/
-console.log(aboutMe);
+  homeOnlyOnLoad();
+  selectedTabReveal();
+});

@@ -45,10 +45,17 @@
     </div>
     <div id="web-design" class="tab-content">
       <h2>Web Design</h2>
-      <img src="pictures/aboutMeScreenShot.png"/>
-      <p>
-        You are on the Web Design page
-      </p>
+
+      <script id="web-design-template" type="text/x-handlebars-template">
+        <section>
+          <a href="{{url}}"><img src="{{screenShotFileName}}"/></a>
+            <div class="projectInfo">
+              <span class="projectInfoCategory">title: </span>{{{title}}}
+              <span class="projectInfoCategory">date: </span>{{{date}}}
+              <span class="projectInfoCategory">description: </span>{{{description}}}
+            </div>
+        </section>
+      </script>
     </div>
     <div id="art" class="tab-content">
       <h2>Artwork</h2>
@@ -57,7 +64,10 @@
         You are on the Art page
       </p>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+     <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js'></script>-->
+    <script src="vendor/handlebars-v4.0.10.js"></script>
+    <script type="text/javascript" src="javascript/libraries.js"></script>
+    <script type="text/javascript" src="javascript/callWebDesignLibrary.js"></script>
+    <script type="text/javascript" src="javascript/script.js"></script>
   </body>
-
 </html>
