@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Chuck Forsythe Portfolio</title>
+    <!--<meta name="viewport" content="width=320">-->
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" text="text/css" href="styles/cssReset.css"/>
     <link rel="stylesheet" text="text/css" href="styles/base.css"/>
@@ -12,62 +13,65 @@
     <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <h1 class="chuckTitle">Chuck Forsythe</h1>
-      <div class="socialMedia">
-        <ul class="socialMedia">
-          <li class="socialMediaIcon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          <li class="socialMediaIcon"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-          <li class="socialMediaIcon"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        </ul>
+    <div class="wrapper">
+      <header>
+        <h1 class="chuckTitle">Chuck Forsythe</h1>
+        <div class="socialMedia">
+          <i class="fa fa-share-square-o" aria-hidden="true"></i>
+          <ul>
+            <li class="socialMediaIcon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li class="socialMediaIcon"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li class="socialMediaIcon"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <nav class="main-nav">
+          <i class="fa fa-bars "aria-hidden="true"></i>
+          <ul>
+            <li class="tabs" data-content="home"><a href="#">Home</a></li>
+            <li class="tabs" data-content="about"><a href="#">About</a></li>
+            <li class="tabs" data-content="web-design"><a href="#">Web Design</a></li>
+            <li class="tabs" data-content="art"><a href="#">Art</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="home" class="tab-content">
+        <h2>Welcome</h2>
+        <p>
+          You are on the Home page
+        </p>
       </div>
-      <nav class="main-nav">
-        <i class="fa fa-bars fa-2x "aria-hidden="true"></i>
-        <ul>
-          <li class="tabs" data-content="home"><a href="#">Home</a></li>
-          <li class="tabs" data-content="about"><a href="#">About</a></li>
-          <li class="tabs" data-content="web-design"><a href="#">Web Design</a></li>
-          <li class="tabs" data-content="art"><a href="#">Art</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div id="home" class="tab-content">
-      <h2>Welcome</h2>
-      <p>
-        You are on the Home page
-      </p>
-    </div>
-    <div id="about" class="tab-content">
-      <h2>Bio</h2>
-      <p>
-        You are on the About page
-      </p>
-    </div>
-    <div id="web-design" class="tab-content">
-      <h2>Web Design</h2>
+      <div id="about" class="tab-content">
+        <h2>Bio</h2>
+        <p>
+          You are on the About page
+        </p>
+      </div>
+      <div id="web-design" class="tab-content">
+        <h2>Web Design</h2>
 
-      <script id="web-design-template" type="text/x-handlebars-template">
-        <section>
-          <a href="{{url}}"><img src="{{screenShotFileName}}"/></a>
-            <div class="projectInfo">
-              <span class="projectInfoCategory">title: </span>{{{title}}}
-              <span class="projectInfoCategory">date: </span>{{{date}}}
-              <span class="projectInfoCategory">description: </span>{{{description}}}
-            </div>
-        </section>
-      </script>
+        <script id="web-design-template" type="text/x-handlebars-template">
+          <section>
+            <a href="{{url}}"><img src="{{screenShotFileName}}"/></a>
+              <div class="projectInfo">
+                <span class="projectInfoCategory">title: </span>{{{title}}}
+                <span class="projectInfoCategory">date: </span>{{{date}}}
+                <span class="projectInfoCategory">description: </span>{{{description}}}
+              </div>
+          </section>
+        </script>
+      </div>
+      <div id="art" class="tab-content">
+        <h2>Artwork</h2>
+        <img href="bla"
+        <p>
+          You are on the Art page
+        </p>
+      </div>
+       <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js'></script>-->
+      <script src="vendor/handlebars-v4.0.10.js"></script>
+      <script type="text/javascript" src="javascript/libraries.js"></script>
+      <script type="text/javascript" src="javascript/callWebDesignLibrary.js"></script>
+      <script type="text/javascript" src="javascript/script.js"></script>
     </div>
-    <div id="art" class="tab-content">
-      <h2>Artwork</h2>
-      <img href="bla"
-      <p>
-        You are on the Art page
-      </p>
-    </div>
-     <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js'></script>-->
-    <script src="vendor/handlebars-v4.0.10.js"></script>
-    <script type="text/javascript" src="javascript/libraries.js"></script>
-    <script type="text/javascript" src="javascript/callWebDesignLibrary.js"></script>
-    <script type="text/javascript" src="javascript/script.js"></script>
   </body>
 </html>
