@@ -14,7 +14,6 @@ console.log(aboutMe);
 --------------------END-------------------*/
 /* Click Hamburger or share icons to reveal tabs */
 var hamburgerReveal = function() {
-  $('.tabs').hide();
   $('.main-nav').click(function(){
     $('.tabs').slideToggle(100);
   });
