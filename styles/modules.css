@@ -52,6 +52,12 @@ div .socialMedia {
   display:inline;
   padding: 6px 0 6px 0;
 }
+/*test-------*/
+section{
+  background-color: yellow;
+}
+
+
 /*---------Section  ----------*/
 .projectInfo{
   margin-top: 24px;
@@ -73,9 +79,26 @@ div .socialMedia {
   .main-nav ul{
     display:inline;
   }
-#web-design{
-  display: none;
-}
+  .tab-content{
+    width: 80vw;
+    background-color: lightblue;
+    margin:auto;
+  }
+  img{
+    max-width: 45vw;
+    max-height: 400px;
+  }
+  .webContainer{
+    border: 1px solid blue;
+  }
+  .webContainer img{
+    position:relative;
+    right: 0px;
+    margin: 0;
+  }
+  .web-design{
+    border: 1px solid yellow;
+  }
 /*------*/
 }
 

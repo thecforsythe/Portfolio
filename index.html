@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="chuckTitle">Chuck Forsythe</h1>
+        <h1 class="chuckTitle">Chuckf Forsythe</h1>
         <div class="socialMedia">
           <i class="fa fa-share-square-o" aria-hidden="true"></i>
           <ul>
@@ -51,12 +51,14 @@
 
         <script id="web-design-template" type="text/x-handlebars-template">
           <section>
-            <a href="{{url}}"><img src="{{screenShotFileName}}"/></a>
+            <div class="webContainer">
+              <a href="{{url}}"><img src="{{screenShotFileName}}"/></a>
               <div class="projectInfo">
                 <span class="projectInfoCategory">title: </span>{{{title}}}
                 <span class="projectInfoCategory">date: </span>{{{date}}}
                 <span class="projectInfoCategory">description: </span>{{{description}}}
               </div>
+            </div>
           </section>
         </script>
       </div>

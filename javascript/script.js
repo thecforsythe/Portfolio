@@ -43,6 +43,7 @@ var selectedTabReveal = function() {
   });
 };
 
+$('.webContainer').parent().css('background-color','green');
 /* Call all functions */
 $(document).ready(function(){
   hamburgerReveal();
