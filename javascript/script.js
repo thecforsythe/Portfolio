@@ -1,17 +1,52 @@
 'use strict';
-/*-------------CONSTRUCTOR FUNCTION----------
-function Portfolio (image, name, link, date, notes) {
-  this.image = image;
-  this.name = name;
-  this.link = link;
-  this.date = date;
-  this.notes = notes;
+//-------------CONSTRUCTOR FUNCTION----------
+function Portfolio (jsonObj) {
+  this.image = jsonObj.image;
+  this.name = jsonObj.name;
+  this.link = jsonObj.link;
+  this.date = jsonObj.date;
+  this.notes = jsonObj.notes;
 }
 
-var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecforsythe.github.io/About-Me/', '6-12-17', 'Created first website using HTML and Javascript. Hey everbody has to start somewhere.');
-console.log(aboutMe);
+/*var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecforsythe.github.io/About-Me/', '6-12-17', 'Created first website using HTML and Javascript. Hey everbody has to start somewhere.');
+console.log(aboutMe);*/
+Portfolio.all = [];
 
---------------------END-------------------*/
+Portfolio.prototype.toHtml = function(){
+  let template = Handlebars.compile($('#web-design-template').text());
+  return template(this);
+};
+
+Portfolio.loadAll = function(jsonLibrary) {
+  jsonLibrary.forEach(function(ele) {
+    Portfolio.all.push(new Portfolio(ele));
+  });
+};
+
+Portfolio.fetchAll = function() {
+  var eTag;
+  $.ajax({
+    type: 'HEAD',
+    url: 'data/jsonLibrary.json',
+    complete: function(XMLHttpRequest){
+      eTag = XMLHttpRequest.getResponseHeader('ETag');
+    }
+  });
+  if (localStorage.eTag === eTag) {
+
+    Portfolio.loadAll(JSON.parse(localStorage.jsonLibrary));
+    portfolioView.initIndexPage();
+  } else {
+    $.getJSON( 'data/jsonLibrary.json', function(data,message,xhr) {
+      localStorage.eTag = xhr.getResponseHeader('ETag');
+      localStorage.rawData = JSON.stringify(data);
+      Portfolio.loadAll(data);
+      portfoioView.initIndexPage();
+    });
+  }
+}
+
+//--------------------END-------------------
 /* Click Hamburger or share icons to reveal tabs */
 var hamburgerReveal = function() {
   $('.main-nav').click(function(){
@@ -42,7 +77,9 @@ var selectedTabReveal = function() {
   });
 };
 
-$('.webContainer').parent().css('background-color','green');
+/*Find Parent*/
+//$('.webContainer').parent().css('background-color','green');
+
 /* Call all functions */
 $(document).ready(function(){
   hamburgerReveal();
