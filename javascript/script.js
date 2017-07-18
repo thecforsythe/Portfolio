@@ -8,9 +8,8 @@ function Portfolio (jsonObj) {
   this.notes = jsonObj.notes;
 }
 
-/*var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecforsythe.github.io/About-Me/', '6-12-17', 'Created first website using HTML and Javascript. Hey everbody has to start somewhere.');
-console.log(aboutMe);*/
 Portfolio.all = [];
+
 
 Portfolio.prototype.toHtml = function(){
   let template = Handlebars.compile($('#web-design-template').text());
@@ -24,28 +23,28 @@ Portfolio.loadAll = function(jsonLibrary) {
 };
 
 Portfolio.fetchAll = function() {
-  var eTag;
-  $.ajax({
-    type: 'HEAD',
-    url: 'data/jsonLibrary.json',
-    complete: function(XMLHttpRequest){
-      eTag = XMLHttpRequest.getResponseHeader('ETag');
-    }
-  });
-  if (localStorage.eTag === eTag) {
-
-    Portfolio.loadAll(JSON.parse(localStorage.jsonLibrary));
-    portfolioView.initIndexPage();
+  let json = localStorage.jsonLibrary;
+  if (json) {
+    console.log({json});
+    Portfolio.loadAll(JSON.parse(json));
+    Portfolio.renderAll();
   } else {
-    $.getJSON( 'data/jsonLibrary.json', function(data,message,xhr) {
-      localStorage.eTag = xhr.getResponseHeader('ETag');
-      localStorage.rawData = JSON.stringify(data);
-      Portfolio.loadAll(data);
-      portfoioView.initIndexPage();
-    });
+    $.getJSON( 'data/jsonLibrary.json' )
+      .then(function(data) {
+        localStorage.jsonLibrary = JSON.stringify(data);
+        Portfolio.loadAll(data);
+        Portfolio.renderAll();
+
+      }, function (xhr, message, err) {
+        console.error(err);
+      });
   }
 }
-
+Portfolio.renderAll = function () {
+  Portfolio.all.forEach(function(project){
+    $('#web-design').append(project.toHtml())
+  });
+}
 //--------------------END-------------------
 /* Click Hamburger or share icons to reveal tabs */
 var hamburgerReveal = function() {
