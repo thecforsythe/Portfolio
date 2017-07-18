@@ -12,9 +12,10 @@ body {
   color: black;
   background-color: white;
   padding: 0px 20px;
-
 }
-
+img {
+  max-width: 100%;
+}
 /*Text STYLES
 =======================================*/
 

@@ -12,6 +12,7 @@
   font-size: 1.8rem;
   clear:;
   padding: 3px 0;
+  display: none;
 }
 .tabs:hover {
   background-color: whitesmoke;
@@ -84,21 +85,26 @@ section{
     background-color: lightblue;
     margin:auto;
   }
-  img{
-    max-width: 45vw;
-    max-height: 400px;
+  .tabs{
+    display: inline-block;
   }
   .webContainer{
     border: 1px solid blue;
+    clear: both;
+    overflow: hidden;
   }
-  .webContainer img{
-    position:relative;
-    right: 0px;
+  .webContainer a{
+    float:right;
     margin: 0;
+    max-width: 45vw;
+    max-height: 400px;
   }
   .web-design{
     border: 1px solid yellow;
   }
+  .fa.fa-bars {
+display:none;
+}
 /*------*/
 }
 
