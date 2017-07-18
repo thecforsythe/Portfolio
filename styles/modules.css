@@ -1,29 +1,64 @@
+
+
+/*---------Hamburger Icon ----------*/
+
 .fa-bars {
   float: left;
-  margin-top: -33px;
+  margin-top: -29px;
   display: inline;
 }
 
 .tabs {
-  font-size: 1.2em;
+  font-size: 1.8rem;
+  clear:;
+  padding: 3px 0;
+}
+.tabs:hover {
+  background-color: whitesmoke;
+  padding-left: 6px;
+  border-top-right-radius: 30px;
+  color: green;
+}
+a:hover{
+  color:FireBrick  ;
+}
+
+.main-nav i{
+  font-size: 2rem;
 }
 .main-nav ul{
   display: block;
   padding-bottom: 5px;
+  width: 75%;
 }
-/*.main-nav:hover ul{
-  display: block;
-}*/
-.socialMedia ul{
+/*---------Social Media Icon ----------*/
+
+div .socialMedia {
   float: right;
-  margin-top: -31px;
-  outline: 1px solid red;
+  margin-top: -29px;
+
+}
+.fa-share-square-o {
+  margin-bottom: 10px;
+}
+.socialMedia i {
+  font-size: 2rem;
+}
+.socialMedia li{
+  display: block;
+  outline: 1px solid none;
 }
 .socialMediaIcon {
   display:inline;
-  padding: 5px;
+  padding: 6px 0 6px 0;
+}
+/*test-------*/
+section{
+  background-color: yellow;
 }
 
+
+/*---------Section  ----------*/
 .projectInfo{
   margin-top: 24px;
 }
@@ -34,15 +69,52 @@
 .pNoPadding {
   padding: 0px;
 }
-@media only screen and (min-width: 500px){
+/* I PHONE */@media only screen and (min-width : 600px) and (max-width : 1000px){
+   .socialMedia {
+    display: none;
+  }
+  h1{
+    font-size: 52px;
+  }
   .main-nav ul{
+    display:inline;
+  }
+  .tab-content{
+    width: 80vw;
+    background-color: lightblue;
+    margin:auto;
+  }
+  img{
+    max-width: 45vw;
+    max-height: 400px;
+  }
+  .webContainer{
+    border: 1px solid blue;
+  }
+  .webContainer img{
+    position:relative;
+    right: 0px;
+    margin: 0;
+  }
+  .web-design{
+    border: 1px solid yellow;
+  }
+/*------*/
+}
+
+
+/*and (orientation : portrait)*/
+  /*.main-nav ul{
     float: left;
     display: block;
     padding-right: 20px;
     max-width: 150px;
-    background-color: none;
-  }
-  .social{
-    /*display: none;*/
-  }
-}
+    background-color: none;*/
+
+
+    /*display: none;
+double line below h1
+}  border-bottom: 2px solid white;
+  box-shadow: inset 0 -1px 0 0 #000, 0 1px 0 0 #000;
+  width: 75%;
+  margin: auto;*/

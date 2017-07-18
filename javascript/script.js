@@ -12,11 +12,18 @@ var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecfor
 console.log(aboutMe);
 
 --------------------END-------------------*/
-/* Click Hamburger to reveal tabs */
+/* Click Hamburger or share icons to reveal tabs */
 var hamburgerReveal = function() {
   $('.tabs').hide();
   $('.main-nav').click(function(){
     $('.tabs').slideToggle(100);
+  });
+};
+/* Click Hamburger or share icons to reveal tabs */
+var shareReveal = function() {
+  $('.socialMediaIcon').hide();
+  $('.socialMedia').click(function(){
+    $('.socialMediaIcon').slideToggle(100);
   });
 };
 
@@ -36,9 +43,12 @@ var selectedTabReveal = function() {
   });
 };
 
+$('.webContainer').parent().css('background-color','green');
 /* Call all functions */
 $(document).ready(function(){
   hamburgerReveal();
+  shareReveal();
   homeOnlyOnLoad();
   selectedTabReveal();
+
 });
