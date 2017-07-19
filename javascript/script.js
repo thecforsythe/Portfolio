@@ -1,11 +1,11 @@
 'use strict';
 //-------------CONSTRUCTOR FUNCTION----------
 function Portfolio (jsonObj) {
-  this.image = jsonObj.image;
-  this.name = jsonObj.name;
-  this.link = jsonObj.link;
+  this.screenShotFileName = jsonObj.screenShotFileName;
+  this.title = jsonObj.title;
+  this.url = jsonObj.url;
   this.date = jsonObj.date;
-  this.notes = jsonObj.notes;
+  this.description = jsonObj.description;
 }
 
 Portfolio.all = [];
