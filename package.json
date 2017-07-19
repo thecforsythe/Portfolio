@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/thecforsythe/portfolio/issues"
   },
-  "homepage": "https://github.com/thecforsythe/portfolio#readme"
+  "homepage": "https://github.com/thecforsythe/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
