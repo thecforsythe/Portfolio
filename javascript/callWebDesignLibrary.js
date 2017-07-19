@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 //--------------Summon Handlebars----------
 var sectionWebDesign = [];
 
@@ -24,3 +24,4 @@ sectionWebDesign.forEach(function(section){
 });
 
 console.log(webDesignLibrary);
+*/

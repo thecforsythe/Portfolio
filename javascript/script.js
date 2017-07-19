@@ -1,17 +1,51 @@
 'use strict';
-/*-------------CONSTRUCTOR FUNCTION----------
-function Portfolio (image, name, link, date, notes) {
-  this.image = image;
-  this.name = name;
-  this.link = link;
-  this.date = date;
-  this.notes = notes;
+//-------------CONSTRUCTOR FUNCTION----------
+function Portfolio (jsonObj) {
+  this.screenShotFileName = jsonObj.screenShotFileName;
+  this.title = jsonObj.title;
+  this.url = jsonObj.url;
+  this.date = jsonObj.date;
+  this.description = jsonObj.description;
 }
 
-var aboutMe = new Portfolio('aboutMeScreeShot.png', 'About Me', 'https://thecforsythe.github.io/About-Me/', '6-12-17', 'Created first website using HTML and Javascript. Hey everbody has to start somewhere.');
-console.log(aboutMe);
+Portfolio.all = [];
 
---------------------END-------------------*/
+
+Portfolio.prototype.toHtml = function(){
+  let template = Handlebars.compile($('#web-design-template').text());
+  return template(this);
+};
+
+Portfolio.loadAll = function(jsonLibrary) {
+  jsonLibrary.forEach(function(ele) {
+    Portfolio.all.push(new Portfolio(ele));
+  });
+};
+
+Portfolio.fetchAll = function() {
+  let json = localStorage.jsonLibrary;
+  if (json) {
+    console.log({json});
+    Portfolio.loadAll(JSON.parse(json));
+    Portfolio.renderAll();
+  } else {
+    $.getJSON( 'data/jsonLibrary.json' )
+      .then(function(data) {
+        localStorage.jsonLibrary = JSON.stringify(data);
+        Portfolio.loadAll(data);
+        Portfolio.renderAll();
+
+      }, function (xhr, message, err) {
+        console.error(err);
+      });
+  }
+}
+Portfolio.renderAll = function () {
+  Portfolio.all.forEach(function(project){
+    $('#web-design').append(project.toHtml())
+  });
+}
+//--------------------END-------------------
 /* Click Hamburger or share icons to reveal tabs */
 var hamburgerReveal = function() {
   $('.main-nav').click(function(){
@@ -42,7 +76,9 @@ var selectedTabReveal = function() {
   });
 };
 
-$('.webContainer').parent().css('background-color','green');
+/*Find Parent*/
+//$('.webContainer').parent().css('background-color','green');
+
 /* Call all functions */
 $(document).ready(function(){
   hamburgerReveal();

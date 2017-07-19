@@ -8,14 +8,14 @@
     <link rel="stylesheet" text="text/css" href="styles/base.css"/>
     <link rel="stylesheet" text="text/css" href="styles/layout.css"/>
     <link rel="stylesheet" text="text/css" href="styles/modules.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
-    <script src="https://use.fontawesome.com/c2f7217687.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet"><!--Google Font-->
+    <script src="https://use.fontawesome.com/c2f7217687.js"></script><!--Font Awesome-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>      <!--jquery-->
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="chuckTitle">Chuckf Forsythe</h1>
+        <h1 class="chuckTitle">Chuck Forsythe</h1>
         <div class="socialMedia">
           <i class="fa fa-share-square-o" aria-hidden="true"></i>
           <ul>
@@ -69,11 +69,13 @@
           You are on the Art page
         </p>
       </div>
-       <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js'></script>-->
-      <script src="vendor/handlebars-v4.0.10.js"></script>
-      <script type="text/javascript" src="javascript/libraries.js"></script>
-      <script type="text/javascript" src="javascript/callWebDesignLibrary.js"></script>
-      <script type="text/javascript" src="javascript/script.js"></script>
+      <script src="vendor/handlebars-v4.0.10.js"></script><!--handlebars-->
+      <script type="text/javascript" src="javascript/libraries.js"></script><!--your js library-->
+      <script type="text/javascript" src="javascript/callWebDesignLibrary.js"></script><!--your script to call library-->
+      <script type="text/javascript" src="javascript/script.js"></script><!--your frontend jquery -->
+      <script>
+      Portfolio.fetchAll();
+    </script> <!--calls your json library-->
     </div>
   </body>
 </html>
