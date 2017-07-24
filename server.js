@@ -1,10 +1,11 @@
 console.log('chuck\'s computer is loading express')
+console.log('chuck\'s computer is loading express')
 
 const express = require('express');
 const app = express();
 //const bodyParser = require('body-parser)').urlencode({estended: true});
 const PORT = process.env.PORT || 3000;
-app.use(express.static('/portfolio'));
+app.use(express.static('.'));
 
 //was unsure how to enable bodyParser since I do not have a form or articles, I have read that it may be required to parse json data. Is that correct?
 /*app.post('/articles', bodyParser, function(request, response) {
