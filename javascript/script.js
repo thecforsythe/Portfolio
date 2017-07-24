@@ -29,7 +29,7 @@ Portfolio.fetchAll = function() {
     Portfolio.loadAll(JSON.parse(json));
     Portfolio.renderAll();
   } else {
-    $.getJSON( 'Data/jsonLibrary.json' )
+    $.getJSON( 'data/jsonLibrary.json' )
       .then(function(data) {
         localStorage.jsonLibrary = JSON.stringify(data);
         Portfolio.loadAll(data);
