@@ -5,10 +5,10 @@
     "title":                "<p class=\"pNoPadding\">Check In: A Better Way to Travel</p>",
     "url":                  "https://dustinyschild.github.io/hotel-final-project/index.html",
     "date":                 "<p class=\"pNoPadding\">6-30-2017</p>",
-    "description":          "Working with two other partners, Dustin Yelland and Benjamin Beeksma, we created an API that allows travelers to choose a hotel room in a similar mannor to choosing a seat on airplane. Rooms can be filtered by room type and amenities. I provided a custom layout, css styling and responsive design."
+    "description":          "<p>Working with two other partners, Dustin Yelland and Benjamin Beeksma, we created an API that allows travelers to choose a hotel room in a similar mannor to choosing a seat on airplane. Rooms can be filtered by room type and amenities. I provided a custom layout, css styling and responsive design.</p>"
   },
   {
-    "screenShotFileName":   "pictur es/busMallScreenShot.png",
+    "screenShotFileName":   "pictures/busMallScreenShot.png",
     "title":                "<p class=\"pNoPadding\">Bus Mall</p>",
     "url":                  "https://thecforsythe.github.io/busMall/",
     "date":                 "<p class=\"pNoPadding\">6-23-2017</p>",
