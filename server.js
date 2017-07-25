@@ -19,6 +19,7 @@ app.use(express.static('.'));
   console.log(request.body);
   response.send('Record posted to server!!');*/
 
+app.get('/', (request, response) => response.sendFile('index.html', {root: '.'}));
 app.get('*',function(request,response) {
   response.status(404).sendFile('404.html', {root: '/portfolio'});
 });
