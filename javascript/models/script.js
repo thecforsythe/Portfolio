@@ -65,12 +65,12 @@ var app = app || {};
     });
   }
   //--------------------END-------------------
-  /* Click Hamburger icon to reveal tabs */
-  var hamburgerReveal = function() {
+  /* Click Hamburger icon to reveal tabs - Replacing code with page.js controller pages */
+  /*var hamburgerReveal = function() {
     $('.main-nav').click(function(){
       $('.tabs').slideToggle(100);
     });
-  };
+  };*/
   /* Click Share icon to reveal tabs */
   var shareReveal = function() {
     $('.socialMediaIcon').hide();

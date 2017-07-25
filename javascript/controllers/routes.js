@@ -1,18 +1,10 @@
-// This is where we define the client-side routes
-page('*', //view.middleware.activeHeaderLink);
-  function(ctx, next) {
-    var activeLink = $(`a[href='${ctx.path}']`);
-    //console.log(activeLink.arr('href'));
+'use strict';
+var app = app || {};
 
-    $('a.active').removeClass('active');
-    activeLink.toggleClass('active');
 
-    next();
-  });
-
-page('/', app.home);
-page('/about', app.about);
-page('/web-design', app.contact);
-page('/artwork', 'about');
+page('/', app.homeController.init);
+page('/about', app.aboutController.init);
+page('/webDesign', app.webDesignController.init);
+page('/artwork', app.artworkController.init);
 
 page();

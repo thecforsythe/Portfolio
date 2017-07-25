@@ -8,6 +8,8 @@ var app = app || {};
   webDesignController.init = function() {
     $('.tab-content').hide();
     $('#web-Design').show();
+    app.Portfolio.fetchAll()
+
   };
 
   module.webDesignController = webDesignController;
