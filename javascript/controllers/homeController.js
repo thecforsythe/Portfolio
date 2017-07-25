@@ -8,7 +8,6 @@ var app = app || {};
   homeController.init = function() {
     $('.tab-content').hide();
     $('#home').show();
-    app.Portfolio.fetchAll()
   };
 
   module.homeController = homeController;

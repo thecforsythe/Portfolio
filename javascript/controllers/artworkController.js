@@ -7,7 +7,7 @@ var app = app || {};
 
   artworkController.init = function() {
     $('.tab-content').hide();
-    $('#art').show();
+    $('#artwork').show();
   };
 
   module.artworkController = artworkController;
