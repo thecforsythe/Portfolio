@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 const client = new pg.Client(conString);
 USE ABOVE IF YOU HAVE A DATABASE USING POSTGRESS*/
 
-app.use(express.static('.'));
+app.use(express.static('.')); //adds a prefix to file path listed in urls
 
 //was unsure how to enable bodyParser since I do not have a form or articles, I have read that it may be required to parse json data. Is that correct?
 /*app.post('/articles', bodyParser, function(request, response) {
