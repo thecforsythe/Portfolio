@@ -5,7 +5,7 @@ var app = app || {};
 (function(module) {
   const aboutController = {};
 
-  aboutController.init = function() {
+  aboutController.index = function() {
     $('.tab-content').hide();
     $('#about').show();
   };

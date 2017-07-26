@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 var app = app || {};
 (function(module){
@@ -107,4 +107,4 @@ var app = app || {};
 
   });
   module.Portfolio = Portfolio;
-}(app));
+}(app));*/

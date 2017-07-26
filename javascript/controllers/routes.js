@@ -3,8 +3,8 @@ var app = app || {};
 
 
 page('/', app.homeController.index);
-page('/about', app.aboutController.init);
-page('/webDesign', app.webDesignController.init);
-page('/artwork', app.artworkController.init);
+page('/about', app.aboutController.index);
+page('/webDesign', app.webDesignController.index);
+page('/artwork', app.artworkController.index);
 
 page();

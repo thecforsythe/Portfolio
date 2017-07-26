@@ -20,6 +20,9 @@ app.use(express.static('.')); //adds a prefix to file path listed in urls
   response.send('Record posted to server!!');*/
 
 app.get('/', (request, response) => response.sendFile('index.html', {root: '.'}));
+app.get('/about', (request, response) => response.sendFile('index.html', {root: '.'}));
+app.get('/webDesign', (request, response) => response.sendFile('index.html', {root: '.'}));
+app.get('/artwork', (request, response) => response.sendFile('index.html', {root: '.'}));
 app.get('*',function(request,response) {
   response.status(404).sendFile('404.html', {root: '/portfolio'});
 });

@@ -66,11 +66,11 @@ var app = app || {};
   }
   //--------------------END-------------------
   /* Click Hamburger icon to reveal tabs - Replacing code with page.js controller pages */
-  /*var hamburgerReveal = function() {
+  var hamburgerReveal = function() {
     $('.main-nav').click(function(){
       $('.tabs').slideToggle(100);
     });
-  };*/
+  };
   /* Click Share icon to reveal tabs */
   var shareReveal = function() {
     $('.socialMediaIcon').hide();
@@ -102,8 +102,8 @@ var app = app || {};
   $(document).ready(function(){
     hamburgerReveal();
     shareReveal();
-    homeOnlyOnLoad();
-    selectedTabReveal();
+    //homeOnlyOnLoad(); /*Old function, referenced on line 83 above, replaced when pages.js was incorporated*/
+    //selectedTabReveal();  /*Old function, referenced on line 89 above, replaced when pages.js was incorporated*/
 
   });
   module.Portfolio = Portfolio;

@@ -5,11 +5,10 @@ var app = app || {};
 (function(module) {
   const webDesignController = {};
 
-  webDesignController.init = function() {
+  webDesignController.index = function() {
     $('.tab-content').hide();
-    $('#web-Design').show();
-    app.Portfolio.fetchAll()
-
+    $('#web-design').show();
+    app.Portfolio.fetchAll();
   };
 
   module.webDesignController = webDesignController;
