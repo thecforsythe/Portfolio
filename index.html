@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet"><!--Google Font-->
     <script src="https://use.fontawesome.com/c2f7217687.js"></script><!--Font Awesome-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>      <!--jquery-->
+    <script src="vendor/page.js"></script><!--page.js-->
   </head>
   <body>
     <div class="wrapper">
@@ -27,10 +28,10 @@
         <nav class="main-nav">
           <i class="fa fa-bars "aria-hidden="true"></i>
           <ul>
-            <li class="tabs" data-content="home"><a href="#">Home</a></li>
-            <li class="tabs" data-content="about"><a href="#">About</a></li>
-            <li class="tabs" data-content="web-design"><a href="#">Web Design</a></li>
-            <li class="tabs" data-content="art"><a href="#">Art</a></li>
+            <li class="tabs" data-content="home"><a href="/">Home</a></li>
+            <li class="tabs" data-content="about"><a href="/about">About</a></li>
+            <li class="tabs" data-content="web-design"><a href="/webDesign">Web Design</a></li>
+            <li class="tabs" data-content="artwork"><a href="/artwork">Artwork</a></li>
           </ul>
         </nav>
       </header>
@@ -62,7 +63,7 @@
           </section>
         </script>
       </div>
-      <div id="art" class="tab-content">
+      <div id="artwork" class="tab-content">
         <h2>Artwork</h2>
         <img href="bla"
         <p>
@@ -72,10 +73,14 @@
       <script src="vendor/handlebars-v4.0.10.js"></script><!--handlebars-->
       <script type="text/javascript" src="javascript/libraries.js"></script><!--your js library-->
       <script type="text/javascript" src="javascript/callWebDesignLibrary.js"></script><!--your script to call library-->
-      <script type="text/javascript" src="javascript/script.js"></script><!--your frontend jquery -->
-      <script>
-      Portfolio.fetchAll();
-    </script> <!--calls your json library-->
+      <script type="text/javascript" src="javascript/models/script.js"></script><!--your frontend jquery -->
+      <script src="javascript/controllers/homeController.js"></script><!--loads home tab by url -->
+      <script src="javascript/controllers/aboutController.js"></script><!--loads about tab by url -->
+      <script src="javascript/controllers/webDesignController.js"></script><!--loads web design tab by url -->
+      <script src="javascript/controllers/artworkController.js"></script><!--loads artwork tab by url -->
+      <script src="javascript/controllers/routes.js"></script><!--loads article tab by url -->
+      <!--OLD CODE Portfolio.fetchAll();-->
+      <!-- OLD CODE <script>app.Portfolio.fetchAll()</script> <!--calls your json library, moved to homeController.js-->
     </div>
   </body>
 </html>

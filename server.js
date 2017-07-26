@@ -5,7 +5,12 @@ const express = require('express');
 const app = express();
 //const bodyParser = require('body-parser)').urlencode({estended: true});
 const PORT = process.env.PORT || 3000;
-app.use(express.static('/portfolio'));
+
+/*const conString = 'postgres://:5432/kilovolt';
+const client = new pg.Client(conString);
+USE ABOVE IF YOU HAVE A DATABASE USING POSTGRESS*/
+
+app.use(express.static('.')); //adds a prefix to file path listed in urls
 
 //was unsure how to enable bodyParser since I do not have a form or articles, I have read that it may be required to parse json data. Is that correct?
 /*app.post('/articles', bodyParser, function(request, response) {
@@ -15,6 +20,10 @@ app.use(express.static('/portfolio'));
   console.log(request.body);
   response.send('Record posted to server!!');*/
 
+app.get('/', (request, response) => response.sendFile('index.html', {root: '.'}));
+app.get('/about', (request, response) => response.sendFile('index.html', {root: '.'}));
+app.get('/webDesign', (request, response) => response.sendFile('index.html', {root: '.'}));
+app.get('/artwork', (request, response) => response.sendFile('index.html', {root: '.'}));
 app.get('*',function(request,response) {
   response.status(404).sendFile('404.html', {root: '/portfolio'});
 });
